@@ -1,5 +1,6 @@
 import { Schema, model } from "mongoose";
-const UserScema = new Schema({
+import PurchasesSchema from "./Purchases";
+const UserSchema = new Schema({
   email: {
     type: String,
     required: true,
@@ -12,10 +13,12 @@ const UserScema = new Schema({
   },
   name: {
     first: {
+      type: String,
       required: true,
       trim: true,
     },
     last: {
+      type: String,
       required: true,
       trim: true,
     },
@@ -31,6 +34,10 @@ const UserScema = new Schema({
   credit: {
     type: Number,
     default: 0.0,
+  },
+  purchasesHistory: {
+    type: [PurchasesSchema],
+    default: [],
   },
 });
 
