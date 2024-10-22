@@ -1,0 +1,23 @@
+@import "root.css";
+
+.container-fluid {
+  background-color: var(--background-color);
+}
+
+.heading {
+  border-radius: 50%;
+}
+.highlight {
+  color: black;
+}
+
+.start_buttons button {
+  border-radius: 20rem;
+}
+
+.order_now {
+  background-color: #f0e8af;
+}
+.text-underline {
+  text-decoration: underline;
+}

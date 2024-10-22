@@ -12,9 +12,9 @@ const __dirname = path.dirname(__filename);
 // router.use("/commands", SupportRouter);
 // router.use("/servers", serversRouter);
 // router.use("/dashboard", dashboardRouter);
+
 router.get("/", (req, res) => {
-  console.log("Hi");
-  return;
+  res.render(path.join(__dirname, "../../view/index"));
 });
 
 export default router;
