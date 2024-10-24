@@ -1,11 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Green Box</title>
+<link rel="stylesheet" href="../styles/bootstrap/bootstrap.min.css">
+<link rel="stylesheet" href="../styles/navbar.css">
+<link rel="stylesheet" href="../styles/home.css">
+<link rel="stylesheet" href="../assests/bootstrap-icons/font/bootstrap-icons.min.css">
+<link rel="stylesheet" href="../styles/footer.css">
+<link rel="stylesheet" href="../styles/about.css">
 </head>
 <body>
-    <h1>Hi</h1>
+<%- include('../components/navbar.ejs',{active :'about-us'}) %>
+<main class="py-5 container-fluid">
+    <div class="container px-5 pb-5 py-5">
+    <div class="row gx-5 align-items-center">
+    <div class="col-xxl-5">
+    <div class="text-center text-xxl-start">
+    <h1 class="display-3 fw-bolder mb-4" >About Us</h1>
+    <div class="fs-3 text-muted fw-normal" >What you see isn't extraordinary for us it's just our standard.</div>
+    </div>
+    </div>
+    <div class="col-xxl-7">
+    
+    <div class="d-flex justify-content-center mt-xxl-0 py-5">
+  <div class="row">
+    <div class="col-12 col-lg-12 text-sm-center border-primary border border-white py-3 bg-light rounded">
+        <img class="img-fluid rounded" loading="lazy" src="../assests/img/iced.jpg" width="400" height="400" alt="About 2">
+      </div>
+  </div>
+    </div>
+    </div>
+    <h1 class="fs-1 text-dark fw-bolder text-center text-wrap h-auto" >
+   Looking For Coffee? We Have The Best ☕
+    </h1>
+    </div>
+    </div>
+    <div class="container">
+    <div class="row justify-content-start">
+    <div class="col-md-4 col">
+    <h1>1</h1>
+    <div class="box about-cards h-auto d-flex flex-column">
+    <h6 class="align-items-end m-4" >Looking for cafe ?</h6>
+    <p class="text-center fw-normal px-2" >Don't Worrie You'r In the Right Place</p>
+    </div>
+    </div>
+    
+    </div>
+    <div class="row justify-content-center">
+    
+    <div class="col-md-4 col ">
+    <h1>2</h1>
+    <div class="box about-cards h-auto d-flex flex-column">
+    <h6 class="align-items-end m-4" >It’s Simple</h6>
+    <p class="text-center fw-normal px-1" >Sign Up Then You Have It a Complete Menu</p>
+    </div>
+    </div>
+    </div>
+    <div class="row justify-content-end mb-5">
+    
+    <div class="col-md-4 col">
+    <h1>3</h1>
+    <div class="box about-cards h-auto d-flex flex-column">
+    <h6 class="align-items-end m-4" >Saves time</h6>
+    <p class="text-center fw-normal px-1" >No Need To Spend Hours Searching Decide Right Now !</p>
+    </div>
+    </div>
+    </div>
+    <h1 class="text-center" >About Us</h1>
+    <p class="text-center"><span>Actually We Are Not A Team I'm One Person In My First Collage Year Develop This Hole Website From A2Z Starting From UI Ending With Full Website, It's More Than A Personal Project It's An Invitation For You To Explore The Digital Universe...</span> <br><span class="border-bottom border-dark" >Here's My Coding Through The Solitary Nights And Designing Through The Inspired Days. Welcome To My Digital Realm!</span></p>
+    </div>
+    </main>
+<%- include('../components/footer.ejs') %>
+<script src="../js/navbar.js"></script>
+<script src="../js/bootstrap/bootstrap.bundle.min.js"></script>
 </body>
 </html>

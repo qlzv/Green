@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="./styles/footer.css">
 </head>
 <body>
-<%- include('components/navbar.ejs') %>
+<%- include('components/navbar.ejs' ,{active : 'home'}) %>
 
 <section class="container-fluid  d-flex flex-column justify-content-center align-items-center py-5">
 <div class="py-3"></div>
@@ -121,7 +121,7 @@ before your activity
   <div class="container">
     <div class="row gy-3 gy-md-4 gy-lg-0 align-items-lg-center">
       <div class="col-12 col-lg-4 text-sm-center border-primary border border-white py-3 bg-light rounded">
-        <img class="img-fluid rounded" loading="lazy" src="./assests/img/heading.jpg" width="400" height="300" alt="About 2">
+        <img class="img-fluid rounded text-center" loading="lazy" src="./assests/img/heading.jpg" width="400" height="300" alt="About 2">
       </div>
       <div class="col-12 col-lg-6">
         <div class="row justify-content-xl-center">
