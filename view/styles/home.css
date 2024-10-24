@@ -2,7 +2,6 @@
 
 .container-fluid {
   background-color: var(--background-color);
-  overflow-x: hidden;
 }
 
 .heading {
@@ -17,8 +16,17 @@
 }
 
 .order_now {
-  background-color: #f0e8af;
+  background-color: var(--button-color);
 }
 .text-underline {
   text-decoration: underline;
+}
+
+.get_coffee {
+  background-color: var(--button-color);
+  transition: 0.3s;
+}
+
+.get_coffee:hover {
+  color: red;
 }
