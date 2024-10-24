@@ -43,6 +43,10 @@ const ProductSchema = new Schema({
     required: true,
     default: 5,
   },
+  isSale: {
+    type: Number,
+    default: 0.0,
+  },
 });
 
 ProductSchema.plugin(AutoIncrement, { inc_field: "product_id" });

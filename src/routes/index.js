@@ -7,10 +7,9 @@ import { fileURLToPath } from "url";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 import { router as aboutUsRouter } from "./aboutus.js";
-// const serversRouter = require("./servers");
-// const dashboardRouter = require("./dashboard");
+import { router as prodcutsRouter } from "./products.js";
 router.use("/about-us", aboutUsRouter);
-// router.use("/servers", serversRouter);
+router.use("/products", prodcutsRouter);
 // router.use("/dashboard", dashboardRouter);
 
 router.get("/", (req, res) => {
