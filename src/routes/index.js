@@ -9,11 +9,11 @@ const __dirname = path.dirname(__filename);
 import { router as aboutUsRouter } from "./aboutus.js";
 import { router as prodcutsRouter } from "./products.js";
 import { router as dashboardRouter } from "./viewproduct.js";
+import { router as cartRouter } from "./cart.js";
 router.use("/about-us", aboutUsRouter);
 router.use("/products", prodcutsRouter);
-
 router.use("/view_product", dashboardRouter);
-
+router.use("/cart", cartRouter);
 router.get("/", (req, res) => {
   res.render(path.join(__dirname, "../../view/index"));
 });
