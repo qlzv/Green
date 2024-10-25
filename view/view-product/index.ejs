@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Green Box</title>
+<link rel="stylesheet" href="../styles/bootstrap/bootstrap.min.css">
+<link rel="stylesheet" href="../styles/home.css">
+<link rel="stylesheet" href="../assests/bootstrap-icons/font/bootstrap-icons.min.css">
+<link rel="stylesheet" href="../styles/navbar.css">
+<link rel="stylesheet" href="../styles/product.css">
+<link rel="stylesheet" href="../styles/footer.css">
+
+</head>
+<body>
+<%- include('../components/navbar.ejs',{active :''}) %>
+<main class="py-5 container-fluid">
+<div class="container-fluid">
+<div class="py-5"></div>
+<div class="card">
+<div class="card-body">
+<div class="row">
+<div class="col-lg-5 col-md-4 col-sm-6">
+<div class="white-box text-center"><img src="https://www.bootdey.com/image/430x600/00CED1/000000" class="img-fluid"></div>
+</div>
+
+<div class="ms-auto col-lg-7 col-md-6 col-sm-6">
+<h4 class="box-title mt-5">Ice Spanish Lattee</h4>
+<p>Lorem Ipsum available,but the majority have suffered alteration in some form,by injected humour,or randomised words which don't look even slightly believable.but the majority have suffered alteration in some form,by injected humour</p>
+<h2 class="mt-5">
+$153<small class="text-success">(36%off)</small>
+</h2>
+
+<button class="btn btn-primary btn-rounded">Add to cart</button>
+<div class="options py-3">
+    <h4>Falvor</h4>
+<input type="radio" class="btn-check" name="options-base" id="option5" autocomplete="off" checked>
+<label class="btn" for="option5">Checked</label>
+
+<input type="radio" class="btn-check" name="options-base" id="option6" autocomplete="off">
+<label class="btn" for="option6">Radio</label>
+
+<input type="radio" class="btn-check" name="options-base" id="option7" autocomplete="off" disabled>
+<label class="btn" for="option7">Disabled</label>
+
+<input type="radio" class="btn-check" name="options-base" id="option8" autocomplete="off">
+<label class="btn" for="option8">Radio</label>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+</main>
+
+<%- include('../components/footer.ejs') %>
+<script src="../js/navbar.js"></script>
+<script src="../js/bootstrap/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+
