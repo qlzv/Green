@@ -12,12 +12,14 @@ import { router as dashboardRouter } from "./viewproduct.js";
 import { router as cartRouter } from "./cart.js";
 import { router as loginRouter } from "./login.js";
 import { router as signupRouter } from "./signup.js";
+import { router as ordersRouter } from "./orders.js";
 router.use("/about-us", aboutUsRouter);
 router.use("/products", prodcutsRouter);
 router.use("/view_product", dashboardRouter);
 router.use("/cart", cartRouter);
 router.use("/login", loginRouter);
 router.use("/signup", signupRouter);
+router.use("/orders", ordersRouter);
 router.get("/", (req, res) => {
   res.render(path.join(__dirname, "../../view/index"));
 });

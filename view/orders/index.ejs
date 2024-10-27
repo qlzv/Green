@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Green Box</title>
+<link rel="stylesheet" href="../styles/bootstrap/bootstrap.min.css">
+<link rel="stylesheet" href="../styles/home.css">
+<link rel="stylesheet" href="../assests/bootstrap-icons/font/bootstrap-icons.min.css">
+<link rel="stylesheet" href="../styles/navbar.css">
+<link rel="stylesheet" href="../styles/orders.css">
+<link rel="stylesheet" href="../styles/footer.css">
+
+</head>
+<body>
+<%- include('../components/navbar.ejs',{active :'orders'}) %>
+<main class="py-5 container-fluid cart-container">
+    <div class="container-fluid my-5  d-flex  justify-content-center">
+        <div class="card card-5 w-100">
+            <div class="card-header bg-white">
+                <div class="media flex-sm-row flex-column-reverse justify-content-between  ">
+                    <div class="col my-auto"> <h4 class="mb-0">Thanks for your Order,<span class="change-color">Name</span> !</h4> </div>
+                   
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="row justify-content-between mb-3">
+                    <div class="col-auto"> <h6 class="color-1 mb-0 change-color">Receipt</h6> </div>
+                    <div class="col-auto  "> <small>Receipt Voucher : 1234-ABCD-5678</small> </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="card card-2">
+                            <div class="card-body">
+                                <div class="media">
+                                    <div class="sq align-self-center "> <img class="img-fluid  my-auto align-self-center mr-2 mr-md-4 pl-0 p-0 m-0" src="../assests/img/cold-brewed-iced-latte-coffee-260nw-1823834426.png" width="135" height="135" /> </div>
+                                    <div class="media-body my-auto text-right">
+                                        <div class="row  my-auto flex-column flex-md-row">
+                                            <div class="col-auto my-auto"> <h6 class="mb-0"> Spanish Lattee</h6>  </div>
+                                            <div class="col my-auto"> <small></small></div>
+                                            <div class="col my-auto"> <small>Size : M</small></div>
+                                            <div class="col my-auto"> <small>Qty : 1</small></div>
+                                            <div class="col my-auto"><h6 class="mb-0">&dollar;3</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr class="my-3 ">
+                                <div class="row">
+                                    <div class="col-md-3 mb-3"> <small> Track Order <span><i class=" ml-2 fa fa-refresh"  aria-hidden="true"></i></span></small> </div>
+                                    <div class="col mt-auto">
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col">
+                        <div class="card card-2">
+                            <div class="card-body">
+                                <div class="media">
+                                    <div class="sq align-self-center "> <img class="img-fluid  my-auto align-self-center mr-2 mr-md-4 pl-0 p-0 m-0" src="../assests/img/FG0051-A-Iced-Snapich-Latte-1.webp" width="135" height="135" /> </div>
+                                    <div class="media-body my-auto text-right">
+                                        <div class="row  my-auto flex-column flex-md-row">
+                                            <div class="col-auto my-auto "> <h6 class="mb-0"> Iced Lattee</h6> </div>
+                                            <div class="col my-auto  "> <small> </small></div>
+                                            <div class="col my-auto  "> <small>Size : L</small></div>
+                                            <div class="col my-auto  "> <small>Qty : 1</small></div>
+                                            <div class="col my-auto ">  <h6 class="mb-0">&dollar;4</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr class="my-3 ">
+                                <div class="row ">
+                                    <div class="col-md-3 mb-3">  <small> Track Order <span><i class=" ml-2 fa fa-refresh" aria-hidden="true"></i></span></small> </div>
+                                    <div class="col mt-auto">
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col">
+                        <div class="row justify-content-between">
+                            <div class="col-auto"><p class="mb-1 text-dark"><b>Order Details</b></p></div>
+                            <div class="flex-sm-col text-right col"> <p class="mb-1"><b>Total</b></p> </div>
+                            <div class="flex-sm-col col-auto"> <p class="mb-1">&dollar;7</p> </div>
+                        </div>
+                        <div class="row justify-content-between">
+                            <div class="flex-sm-col text-right col"><p class="mb-1"> <b>Discount</b></p> </div>
+                            <div class="flex-sm-col col-auto"><p class="mb-1">&dollar;0.0</p></div>
+                        </div>
+                        <div class="row justify-content-between">
+                            <div class="flex-sm-col text-right col"><p class="mb-1"><b>Total To Pay</b></p></div>
+                            <div class="flex-sm-col col-auto"><p class="mb-1">&dollar;7</p></div>
+                        </div>
+                      
+                    </div>
+                </div>
+                <div class="row invoice ">
+                    <div class="col"><p class="mb-1"> Invoice Number : 788152</p><p class="mb-1">Invoice Date : 28 Oct,2024</p><p class="mb-1">Recepits Voucher: 1234-ABCD-5678</p></div>
+                </div>
+            </div>
+      
+        </div>
+    </div>
+</main>
+
+<%- include('../components/footer.ejs') %>
+<script src="../js/bootstrap/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+
