@@ -9,6 +9,8 @@
 <link rel="stylesheet" href="../assests/bootstrap-icons/font/bootstrap-icons.min.css">
 <link rel="stylesheet" href="../styles/navbar.css">
 <link rel="stylesheet" href="../styles/login.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css">
+
 </head>
 <body>
 <%- include('../components/navbar.ejs',{active :''}) %>
@@ -37,51 +39,51 @@
                 <div class="col-12">
                   <div class="mb-4">
                     <h3>Sign up</h3>
-                    <p>have an account? <a href="#!">Sign in</a></p>
+                    <p>have an account? <a href="/login">Sign in</a></p>
                   </div>
                 </div>
               </div>
-              <form action="#!">
+              <form id="signup_form" novalidate action="/signup" method="POST">
                 <div class="row gy-3 overflow-hidden">
                   <div class="col-12">
                     <div class="form-floating mb-3">
-                      <input type="email" class="form-control" name="email" id="email" placeholder="name@example.com" required>
+                      <input type="email" class="form-control" name="email" id="email" placeholder="name@example.com">
                       <label for="email" class="form-label">Email</label>
                     </div>
                   </div>
                   <div class="col-6">
                     <div class="form-floating mb-3">
-                      <input type="text" class="form-control" name="nameFirst" id="nameFirst" value="" placeholder="First Name" required>
+                      <input type="text" class="form-control" name="nameFirst" id="nameFirst" value="" placeholder="First Name">
                       <label for="nameFirst" class="form-label">First Name</label>
                     </div>
                   </div>
                   <div class="col-6">
                     <div class="form-floating mb-3">
-                      <input type="text" class="form-control" name="nameLast" id="nameLast" value="" placeholder="Last Name" required>
+                      <input type="text" class="form-control" name="nameLast" id="nameLast" value="" placeholder="Last Name">
                       <label for="nameLast" class="form-label">Last Name</label>
                     </div>
                   </div>
                   <div class="col-6">
                     <div class="form-floating mb-3">
-                      <input type="number" min="0" class="form-control" name="Serial" id="Serial" value="" placeholder="Universty iD" required>
+                      <input type="number" min="0" class="form-control" name="Serial" id="Serial" value="" placeholder="Universty iD">
                       <label for="Serial" class="form-label">Universty iD</label>
                     </div>
                   </div>
                   <div class="col-6">
                     <div class="form-floating mb-3">
-                      <input type="tel" min="0" class="form-control" name="Phone" id="Phone" value="" placeholder="Phone Number" required>
+                      <input type="tel" min="0" class="form-control" name="Phone" id="Phone" value="" placeholder="Phone Number">
                       <label for="Phone" class="form-label">Phone Number</label>
                     </div>
                   </div>
                   <div class="col-12">
                     <div class="form-floating mb-3">
-                      <input type="password" class="form-control" name="password" id="password" value="" placeholder="Password" required>
+                      <input type="password" class="form-control" name="password" id="password" value="" placeholder="Password">
                       <label for="password" class="form-label">Password</label>
                     </div>
                   </div>
                   <div class="col-12">
                     <div class="form-floating mb-3">
-                      <input type="password" class="form-control" name="password_confirm" id="password_confirm" value="" placeholder="Confirm Password" required>
+                      <input type="password" class="form-control" name="password_confirm" id="password_confirm" value="" placeholder="Confirm Password">
                       <label for="password_confirm" class="form-label">Confirm Password</label>
                     </div>
                   </div>
@@ -102,6 +104,8 @@
     </div>
   </section>
 <script src="../js/bootstrap/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js"></script>
+<script  src="../js/signup.js"></script>
 </body>
 </html>
 

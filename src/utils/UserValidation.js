@@ -24,10 +24,17 @@ function isSerialValid(serial) {
   return serialRegex.test(serial);
 }
 
+function iPhoneValid(serial) {
+  serial = serial.trim();
+  const serialRegex = /^(07[789]\d{7})$/;
+  return serialRegex.test(serial);
+}
+
 export {
   isEmailValid,
   isPasswordValid,
   isFirstNameValid,
   isLastNameValid,
   isSerialValid,
+  iPhoneValid,
 };
