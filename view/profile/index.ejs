@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Green Box</title>
+<link rel="stylesheet" href="../styles/bootstrap/bootstrap.min.css">
+<link rel="stylesheet" href="../styles/home.css">
+<link rel="stylesheet" href="../assests/bootstrap-icons/font/bootstrap-icons.min.css">
+<link rel="stylesheet" href="../styles/navbar.css">
+<link rel="stylesheet" href="../styles/footer.css">
+
+</head>
+<body>
+<%- include('../components/navbar.ejs',{active :''}) %>
+<main class="py-5 container-fluid cart-container">
+    <div class="container rounded bg-white mt-5 mb-5">
+        <div class="row">
+            <div class="col-md-3 border-right">
+                <div class="d-flex flex-column align-items-center text-center p-3 py-5"><i class="bi bi-person-circle" style="font-size: 12rem;"></i><span class="font-weight-bold">Edogaru</span><span class="text-black-50">edogaru@mail.com.my</span><span> </span></div>
+            </div>
+            <div class="col-md-7 border-right">
+                <div class="p-3 py-5">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <h4 class="text-right">Profile Settings</h4>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-12">
+                            <div class="form-floating mb-3">
+                              <input type="email" class="form-control" name="email" id="email" placeholder="name@example.com" required>
+                              <label for="email" class="form-label">Email</label>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-6">
+                            <div class="form-floating mb-3">
+                              <input type="text" class="form-control" name="nameFirst" id="nameFirst" value="" placeholder="First Name" required>
+                              <label for="nameFirst" class="form-label">First Name</label>
+                            </div>
+                          </div>
+                          <div class="col-6">
+                            <div class="form-floating mb-3">
+                              <input type="text" class="form-control" name="nameLast" id="nameLast" value="" placeholder="Last Name" required>
+                              <label for="nameLast" class="form-label">Last Name</label>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-6">
+                            <div class="form-floating mb-3">
+                              <input type="number" min="0" class="form-control" name="Serial" id="Serial" value="" placeholder="Universty iD" readonly>
+                              <label for="Serial" class="form-label">Universty iD</label>
+                            </div>
+                          </div>
+                          <div class="col-6">
+                            <div class="form-floating mb-3">
+                              <input type="tel" min="0" class="form-control" name="Phone" id="Phone" value="" placeholder="Phone Number" required>
+                              <label for="Phone" class="form-label">Phone Number</label>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="mt-5 text-center"><button class="btn btn-primary profile-button" type="button">Save Profile</button></div>
+                </div>
+            </div>
+         
+        </div>
+    </div>
+    </div>
+    </div>
+</main>
+
+<%- include('../components/footer.ejs') %>
+<script src="../js/bootstrap/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+
