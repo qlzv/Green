@@ -30,7 +30,7 @@ function iPhoneValid(serial) {
   return serialRegex.test(serial);
 }
 
-export {
+const UserValidation = {
   isEmailValid,
   isPasswordValid,
   isFirstNameValid,
@@ -38,3 +38,5 @@ export {
   isSerialValid,
   iPhoneValid,
 };
+
+export default UserValidation;
