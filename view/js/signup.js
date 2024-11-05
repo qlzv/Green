@@ -35,38 +35,50 @@ document.addEventListener("DOMContentLoaded", () => {
   form.addEventListener("submit", (event) => {
     var notyf = new Notyf();
     event.preventDefault();
-    const email = form.querySelector("#email").value;
-    const first_name = form.querySelector("#nameFirst").value;
-    const last_name = form.querySelector("#nameLast").value;
-    const serial = form.querySelector("#Serial").value;
-    const phone = form.querySelector("#Phone").value;
-    const password = form.querySelector("#password").value;
-    const password_confirm = form.querySelector("#password_confirm").value;
-    if (!isEmailValid(email)) {
+    const email = form.querySelector("#email");
+    const first_name = form.querySelector("#nameFirst");
+    const last_name = form.querySelector("#nameLast");
+    const serial = form.querySelector("#Serial");
+    const phone = form.querySelector("#Phone");
+    const password = form.querySelector("#password");
+    const password_confirm = form.querySelector("#password_confirm");
+    if (!isEmailValid(email.value)) {
+      email.style.borderColor = "red";
       notyf.error("Invalid Email");
       return;
     }
-    if (!isFirstNameValid(first_name)) {
+    if (!isFirstNameValid(first_name.value)) {
+      first_name.style.borderColor = "red";
       notyf.error("Invalid Name");
       return;
     }
-    if (!isLastNameValid(last_name)) {
+    if (!isLastNameValid(last_name.value)) {
+      last_name.style.borderColor = "red";
       notyf.error("Invalid Name");
       return;
     }
-    if (!isSerialValid(serial)) {
+    if (!isSerialValid(serial.value)) {
+      serial.style.borderColor = "red";
       notyf.error("Invalid Universty id");
       return;
     }
-    if (!iPhoneValid(phone)) {
+    if (!iPhoneValid(phone.value)) {
+      phone.style.borderColor = "red";
       notyf.error("Invalid Phone Number");
       return;
     }
-    if (!isPasswordValid(password) || !isPasswordValid(password_confirm)) {
+    if (
+      !isPasswordValid(password.value) ||
+      !isPasswordValid(password_confirm.value)
+    ) {
+      password.style.borderColor = "red";
+      password_confirm.style.borderColor = "red";
       notyf.error("Invalid Password");
       return;
     }
-    if (password !== password_confirm) {
+    if (password.value !== password_confirm.value) {
+      password.style.borderColor = "red";
+      password_confirm.style.borderColor = "red";
       notyf.error("Password Mismatch");
       return;
     }
