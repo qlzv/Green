@@ -13,17 +13,12 @@ router.get("/", async (req, res) => {
 router.post("/", async (req, res) => {
   const { email, nameFirst, nameLast, Serial, Phone, password } = req.body;
   try {
-    UserRegistration(email, password, nameFirst, nameLast, Serial, Phone);
-    res.status(200).json("Welcome");
+    await UserRegistration(email, password, nameFirst, nameLast, Serial, Phone);
+    res.status(201).json("Success");
   } catch (e) {
-    res.status(404).json("Error");
+    res.status(400).json("Error");
     console.log(e);
   }
 });
 
-/*
-to do
-make sure in user reg modul check for existting users and edit http code
-
-*/
 export { router };

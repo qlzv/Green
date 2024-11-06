@@ -10,11 +10,12 @@
   "author": "Qatada Azzeh",
   "license": "ISC",
   "dependencies": {
+    "bcrypt": "^5.1.1",
     "body-parser": "^1.20.3",
     "cookie-parser": "^1.4.7",
     "ejs": "^3.1.10",
     "express": "^4.21.1",
-    "mongodb": "^6.9.0",
+    "mongodb": "^6.10.0",
     "mongoose": "^8.7.2",
     "mongoose-sequence": "^6.0.1"
   },

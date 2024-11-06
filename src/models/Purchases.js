@@ -19,4 +19,6 @@ const PurchasesSchema = new Schema({
   },
 });
 
-export default model("Purchases", PurchasesSchema);
+const Purchases = model("Purchases", PurchasesSchema);
+
+export default { Purchases, PurchasesSchema };

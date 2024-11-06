@@ -1,5 +1,7 @@
 import UserValidation from "../utils/UserValidation.js";
-const UserRegistration = (
+import User from "../models/User.js";
+import bcrypt from "bcrypt";
+const UserRegistration = async (
   email,
   password,
   firstname,
@@ -7,6 +9,12 @@ const UserRegistration = (
   serial,
   phone
 ) => {
+  const existingUserByEmail = await User.findOne({ email });
+  if (existingUserByEmail) throw new Error("Email already exists");
+
+  const existingUserBySerial = await User.findOne({ Serial: serial });
+  if (existingUserBySerial) throw new Error("Serial number already exists");
+
   if (!UserValidation.isEmailValid(email))
     throw new Error("Invalid Email Format");
   if (!UserValidation.isPasswordValid(password))
@@ -19,10 +27,24 @@ const UserRegistration = (
     throw new Error("Invalid Serial Number");
   if (!UserValidation.iPhoneValid(phone))
     throw new Error("Invalid Phone Number");
+
+  const hashPassword = bcrypt.hashSync(password, 10);
+  password = hashPassword;
+  const newUser = new User({
+    email,
+    password,
+    phone,
+    name: { first: firstname, last: lastname },
+    Serial: serial,
+    purchasesHistory: [],
+  });
+
   try {
+    await newUser.save();
     return true;
   } catch (error) {
-    throw Error("UnExpected Error");
+    console.error("Unexpected Error:", error);
+    throw new Error("Unexpected Error");
   }
 };
 

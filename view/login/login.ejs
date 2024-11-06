@@ -9,6 +9,7 @@
 <link rel="stylesheet" href="../assests/bootstrap-icons/font/bootstrap-icons.min.css">
 <link rel="stylesheet" href="../styles/navbar.css">
 <link rel="stylesheet" href="../styles/login.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css">
 </head>
 <body>
 <%- include('../components/navbar.ejs',{active :''}) %>
@@ -41,7 +42,7 @@
                   </div>
                 </div>
               </div>
-              <form action="#!">
+              <form id="login_form" novalidate action="/login" method="POST">
                 <div class="row gy-3 overflow-hidden">
                   <div class="col-12">
                     <div class="form-floating mb-3">
@@ -84,6 +85,8 @@
       </div>
     </div>
   </section>
+  <script src="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js"></script>
+<script  src="../js/login.js"></script>
 <script src="../js/bootstrap/bootstrap.bundle.min.js"></script>
 </body>
 </html>
