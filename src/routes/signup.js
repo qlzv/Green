@@ -7,7 +7,12 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 router.get("/", async (req, res) => {
-  res.render(path.join(__dirname, "../.././view/signup/index"));
+  if (req.isAuthenticated()) return res.redirect("/");
+  const credit = req.isAuthenticated() ? req.user.credit : 0;
+  res.render(path.join(__dirname, "../.././view/signup/index"), {
+    auth: req.isAuthenticated(),
+    credit: credit,
+  });
 });
 
 router.post("/", async (req, res) => {

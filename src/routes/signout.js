@@ -7,11 +7,11 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 router.get("/", (req, res) => {
-  if (!req.isAuthenticated()) return res.redirect("/login");
-  const credit = req.isAuthenticated() ? req.user.credit : 0;
-  res.render(path.join(__dirname, "../.././view/profile/index"), {
-    auth: req.isAuthenticated(),
-    credit: credit,
+  req.logout((err) => {
+    if (err) {
+      return res.status(500).json("Logout error");
+    }
+    res.redirect("/login");
   });
 });
 export { router };

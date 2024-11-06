@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css">
 </head>
 <body>
-<%- include('../components/navbar.ejs',{active :''}) %>
+  <%- include('../components/navbar.ejs' ,{active : '',auth,credit}) %>
 <section class="container-fluid py-5">
     <div class="container py-5">
       <div class="row gy-4 align-items-center">
@@ -38,7 +38,7 @@
                 <div class="col-12">
                   <div class="mb-4">
                     <h3>Sign in</h3>
-                    <p>Don't have an account? <a href="#!">Sign up</a></p>
+                    <p>Don't have an account? <a href="/signup">Sign up</a></p>
                   </div>
                 </div>
               </div>

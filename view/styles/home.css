@@ -11,7 +11,7 @@
   color: black;
 }
 
-.start_buttons button {
+.start_buttons a {
   border-radius: 20rem;
 }
 

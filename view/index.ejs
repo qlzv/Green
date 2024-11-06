@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="./styles/footer.css">
 </head>
 <body>
-<%- include('components/navbar.ejs' ,{active : 'home'}) %>
+<%- include('components/navbar.ejs' ,{active : 'home',auth,credit}) %>
 
 <section class="container-fluid  d-flex flex-column justify-content-center align-items-center py-5">
 <div class="py-3"></div>
@@ -27,7 +27,7 @@ before your activity
 <p  class="text-light d-block mb-4 learn-more">Boost your productivity and bulid your mood <br> after a long day with a cup of coffee</p>
 <div class="row">
 <div class="col text-center text-lg-start start_buttons">
-<button class="btn order_now me-4">Order Now &nbsp;<i class="bi bi-cup-hot-fill"></i></button>
+<a href="/products" class="btn order_now me-4">Order Now &nbsp;<i class="bi bi-cup-hot-fill"></i></a>
 <button class="btn">Menu &nbsp;<i class="bi bi-three-dots-vertical"></i></button>
 </div>
 
