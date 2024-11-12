@@ -1,6 +1,7 @@
-import { Schema, model } from "mongoose";
-import { AutoIncrementFactory } from "mongoose-sequence";
-const AutoIncrement = AutoIncrementFactory(Schema);
+import mongoose, { Schema, model } from "mongoose";
+import AutoIncrementFactory from "mongoose-sequence"; // Import the default export
+
+const AutoIncrement = AutoIncrementFactory(mongoose); // Pass mongoose to the factory
 
 const ProductSchema = new Schema({
   product_id: {
