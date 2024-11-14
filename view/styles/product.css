@@ -3,3 +3,25 @@
 .card {
   background-color: var(--background-color);
 }
+
+.quantity-container {
+  display: flex;
+  align-items: center;
+}
+.quantity-container button {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ccc;
+  background-color: #f8f9fa;
+  cursor: pointer;
+}
+.quantity-container input {
+  width: 50px;
+  text-align: center;
+  border: 1px solid #ccc;
+  margin: 0 5px;
+  pointer-events: none; /* Prevent direct editing */
+}

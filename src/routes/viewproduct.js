@@ -17,4 +17,9 @@ if(!pro)return res.redirect("/products");
     product : pro
   });
 });
+
+router.get("/",async(req,res)=>{
+  if(!req.isAuthenticated()) return res.status(401).json({msg : "error"});
+  return  res.status(200).json({msg : "success"});
+})
 export { router };
