@@ -19,7 +19,7 @@ const changeNav = (isMobile) => {
       nav.insertAdjacentHTML(
         "beforeend",
         `<li class="nav-item nav-item-cart">
-  <a class="nav-link" aria-current="page" href="#">Cart</a>
+  <a class="nav-link" aria-current="page" href="/cart">Cart</a>
   </li>`
       );
     }

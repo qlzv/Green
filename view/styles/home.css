@@ -1,7 +1,7 @@
 @import "root.css";
-
+body{  background-color: var(--background-color);}
 .container-fluid {
-  background-color: var(--background-color);
+
 }
 
 .heading {

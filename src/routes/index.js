@@ -14,6 +14,7 @@ import { router as signupRouter } from "./signup.js";
 import { router as ordersRouter } from "./orders.js";
 import { router as profileRouter } from "./profile.js";
 import { router as signoutRouter } from "./signout.js";
+import { router as cliqRouter } from "./cliq.js";
 router.use("/about-us", aboutUsRouter);
 router.use("/products", prodcutsRouter);
 router.use("/view_product", dashboardRouter);
@@ -23,6 +24,7 @@ router.use("/signup", signupRouter);
 router.use("/orders", ordersRouter);
 router.use("/profile", profileRouter);
 router.use("/signout", signoutRouter);
+router.use("/cliq-pay", cliqRouter);
 router.get("/", async (req, res) => {
   const credit = req.isAuthenticated() ? req.user.credit : 0;
 

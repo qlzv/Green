@@ -29,9 +29,9 @@
 <p><%= product.description %></p>
 <h2 class="mt-5">
 <% if(product.isSale === 0) {%>
-   $<%= product.price %>
+<span class="product_price">  $<%= product.price %></span>
     <% } else {%>
-  $<%= product.price - (product.price * product.isSale / 100) %>
+<span class="product_price">  $<%= product.price - (product.price * product.isSale / 100) %></span>
   <small class="text-success">(<%= product.isSale %>%off)</small>
     <% } %>
     <br>

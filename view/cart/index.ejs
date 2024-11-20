@@ -22,74 +22,35 @@
                 <div class="title">
                     <div class="row">
                         <div class="col"><h4><b>Shopping Cart</b></h4></div>
-                        <div class="col align-self-center text-right text-muted">3 items</div>
+                        <div id="items_count" class="col align-self-center text-right text-muted"></div>
                     </div>
                 </div>    
-                <div class="row border-top border-bottom">
-                    <div class="row main align-items-center">
-                        <div class="col-2"><img class="img-fluid" src="../assests/img/q1.png"></div>
-                        <div class="col">
-                            <div class="row text-muted">Ice Lattee</div>
-                            <div class="row">Ice Latte (Small)</div>
-                        </div>
-                        <div class="col edit-quantity">
-                            <a href="javascript:void(0);">-</a><strong class="border">1</strong><a href="javascript:void(0);">+</a>
-                        </div>
-                        <div class="col">&euro; 2.5 <span class="close">&#10005;</span></div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="row main align-items-center">
-                        <div class="col-2"><img class="img-fluid" src="../assests/img/FG0051-A-Iced-Snapich-Latte-1.webp"></div>
-                        <div class="col">
-                            <div class="row text-muted">Spanih Latte</div>
-                            <div class="row">Spanih Latte (Large)</div>
-                        </div>
-                        <div class="col edit-quantity">
-                            <a href="javascript:void(0);">-</a><strong class="border">1</strong><a href="javascript:void(0);">+</a>
-                        </div>
-                        <div class="col">&euro; 2.00 <span class="close">&#10005;</span></div>
-                    </div>
-                </div>
-                <div class="row border-top border-bottom">
-                    <div class="row main align-items-center">
-                        <div class="col-2"><img class="img-fluid" src="../assests/img/Green Box.png"></div>
-                        <div class="col">
-                            <div class="row text-muted">Coffee</div>
-                            <div class="row">Coffee Dark</div>
-                        </div>
-                        <div class="col edit-quantity">
-                            <a href="javascript:void(0);">-</a><strong class="border">1</strong><a href="javascript:void(0);">+</a>
-                        </div>
-                        <div class="col">&euro; 1.00 <span class="close">&#10005;</span></div>
-                    </div>
-                </div>
+                <div id="items"></div>
                 <div class="back-to-shop"><a href="/products">&leftarrow;</a><span class="text-muted">Back to shop</span></div>
             </div>
             <div class="col-md-4 summary">
                 <div><h5><b>Summary</b></h5></div>
                 <hr>
-                <div class="row">
-                    <div class="col" style="padding-left:0;">ITEMS 3</div>
-                    <div class="col text-right">&euro; 132.00</div>
-                </div>
+              
                 <form>
-                    <p>SHIPPING</p>
-                    <select><option class="text-muted">Standard-Delivery- &euro;5.00</option></select>
-                    <p>GIVE CODE</p>
-                    <input id="code" placeholder="Enter your code">
+                    <p>Payment Method</p>
+                    <select id="payment_method">
+                        <option value="PICK" class="text-muted">Pickup</option>
+                        <option value="CLIQ" class="text-muted">CLIQ (SULTA1) <span style="font-size: 10%;">(Arab Bank)</span></option>
+                    </select>
+
                 </form>
                 <div class="row" style="border-top: 1px solid rgba(0,0,0,.1); padding: 2vh 0;">
                     <div class="col">TOTAL PRICE</div>
-                    <div class="col text-right">&euro; 137.00</div>
+                    <div id="total_to_pay" class="col text-right"></div>
                 </div>
-                <button class="btn">CHECKOUT</button>
+                <button class="btn checkout">CHECKOUT</button>
             </div>
         </div>
         
     </div>
 </main>
-
+<div class="py-2"></div>
 <%- include('../components/footer.ejs') %>
 <script src="../js/cart.js"></script>
 <script src="../js/bootstrap/bootstrap.bundle.min.js"></script>

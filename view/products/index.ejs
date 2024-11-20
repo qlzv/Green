@@ -65,7 +65,7 @@
                                 $<%= product.price %>
                                 <% } else { %>
                                     <span class="text-muted text-decoration-line-through">$ <%=  product.price %></span>
-                                    $<%= product.price*(product.isSale/100.0) %>
+                                    $<%= product.price - (product.price * product.isSale / 100) %>
                                 <% } %>
                             </div>
                         </div>
