@@ -18,13 +18,12 @@ router.get("/", (req, res) => {
 
 const ValidatePrice = (DefaultPrice,Quantity,FinalPrice) =>{
   Quantity = parseInt(Quantity);
- // console.log(Quantity*DefaultPrice,FinalPrice)
   return (Quantity*DefaultPrice === FinalPrice);
 }
 
 router.post('/',async(req,res)=>{
 if(!req.isAuthenticated()) return res.redirect("/login");
-if(!req.body || req.body.payment_method !== 'CLIQ' && req.body.payment_method !== 'PICK' || !req.body.CartData) return res.status(401).json({msg : "error"});
+if(!req.body || req.body.payment_method !== 'CLIQ' && req.body.payment_method !== 'PICK' && req.body.payment_method !== 'CREDIT'  || !req.body.CartData) return res.status(401).json({msg : "error"});
 const CartData = req.body.CartData;
 for(let crt in CartData){
 const Exisit = await Products.findOne({'name' : crt});

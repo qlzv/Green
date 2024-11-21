@@ -126,6 +126,8 @@ body : JSON.stringify(value)
 if(result.msg == "success"){
 if(payment_method === "CLIQ"){
   window.location.href = "/cliq-pay";
+}else if(payment_method === "CREDIT"){
+  window.location.href = "/credit";
 }else{
   window.location.href = "/";
 }

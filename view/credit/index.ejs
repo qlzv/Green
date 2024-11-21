@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Green Box</title>
+<link rel="stylesheet" href="../styles/bootstrap/bootstrap.min.css">
+<link rel="stylesheet" href="../styles/home.css">
+<link rel="stylesheet" href="../assests/bootstrap-icons/font/bootstrap-icons.min.css">
+<link rel="stylesheet" href="../styles/navbar.css">
+<link rel="stylesheet" href="../styles/cliq.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css">
+</head>
+<body>
+  <%- include('../components/navbar.ejs' ,{active : '',auth,credit}) %>
+<section class="container-fluid py-5">
+    <div class="container py-5">
+        <header class="text-white text-center">
+            <h1 class="display-4">Upload CLIQ Transaction Image here</h1>
+            <p class="lead mb-0">It's Just For Validtion if You'v Payed Don't Worry</p>
+            <p class="lead mb-0" style="color: gray;">Make Sure That ALIAS is <span style="color: red;">(SULTA1)</span> also make sure that  the <span style="color: red;">DATE</span> and <span style="color: red;">AMOUNT</span> of Transaction is showed</p>
+        </header>
+    
+    
+        <div class="row py-4">
+            <div class="col-lg-6 mx-auto">
+    
+
+                <div class="input-group mb-3 px-2 py-2 rounded-pill bg-white shadow-sm">
+                    <input id="upload" type="file"  class="form-control border-0">
+                    <label id="upload-label" for="upload" class="font-weight-light text-muted">Choose file</label>
+                    <div class="input-group-append">
+                        <label for="upload" class="btn btn-light m-0 rounded-pill px-4"> <i class="fa fa-cloud-upload mr-2 text-muted"></i><small class="text-uppercase font-weight-bold text-muted">Choose file</small></label>
+                    </div>
+                </div>
+    
+           
+                <p class="font-italic text-white text-center">The image uploaded will be rendered inside the box below.</p>
+                <div class="image-area mt-4"><img id="imageResult" src="" alt="" class="img-fluid rounded shadow-sm mx-auto d-block"></div>
+                <div class="py-1"></div>
+<div class="d-flex justify-content-center ">
+    <button class="btn btn-light w-100" id="submit">Submit</button>
+</div>
+            </div>
+        </div>
+    </div>
+  </section>
+  <script src="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js"></script>
+<script  src="../js/cliq.js"></script>
+<script src="../js/bootstrap/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+
